@@ -1,4 +1,3 @@
-
 import streamlit as st
 import openai
 
@@ -10,6 +9,7 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = [
         {"role": "system", "content": st.secrets.AppSettings.chatbot_setting}
         ]
+
 # チャットボットとやりとりする関数
 def communicate():
     messages = st.session_state["messages"]
